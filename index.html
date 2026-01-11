@@ -1,98 +1,206 @@
-<style>
-    /* FLUID TYPOGRAPHY ENGINE */
-    :root { 
-        --cyan: #00f3ff; 
-        --bg: #030712; 
-    }
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONUMENT_LABS // Longevity & Human Optimization</title>
     
-    body { 
-        background-color: var(--bg); 
-        color: #94a3b8; 
-        font-family: 'Inter', sans-serif; 
-    }
-
-    /* Architectural Header Logic */
-    .heading-arch { 
-        font-family: 'Cinzel', serif; 
-        font-weight: 900; 
-        line-height: 0.85; 
-        letter-spacing: -0.02em; 
-        color: white;
-        /* Responsive sizing: min 3.5rem, grows with width, max 10rem */
-        font-size: clamp(3rem, 15vw, 10rem);
-    }
-
-    /* Terminal HUD Logic */
-    .mono-hud { 
-        font-family: 'Fira Code', monospace; 
-        letter-spacing: 0.35em; 
-        text-transform: uppercase; 
-        font-size: clamp(0.6rem, 2vw, 0.75rem);
-        color: #475569; 
-    }
-
-    /* Mobile-Specific Overrides */
-    @media (max-width: 768px) {
-        .heading-arch {
-            line-height: 0.95;
-            letter-spacing: -0.01em;
-            text-align: center;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --navy: #0f172a; 
+            --slate: #334155;
+            --accent: #2563eb; /* Norvoc-style Clinical Blue */
+            --bg: #ffffff; 
         }
-        .mono-hud {
-            letter-spacing: 0.2em;
-            text-align: center;
-            display: block;
+        body { 
+            background-color: var(--bg); 
+            color: var(--slate); 
+            font-family: 'Inter', sans-serif; 
+            -webkit-font-smoothing: antialiased;
         }
-        .hero-layout {
-            text-align: center;
+
+        /* HEADER REFINEMENT */
+        .heading-clinical { 
+            font-weight: 700; 
+            letter-spacing: -0.03em; 
+            color: var(--navy); 
+            line-height: 1.1;
         }
-        .border-accent {
-            border-left: none;
-            border-top: 2px solid var(--cyan);
-            padding-left: 0;
-            padding-top: 1.5rem;
-            margin-top: 1rem;
+
+        .mono-tag { 
+            font-family: 'JetBrains Mono', monospace; 
+            text-transform: uppercase; 
+            font-size: 0.7rem; 
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            background: rgba(37, 99, 235, 0.05);
+            padding: 4px 12px;
+            border-radius: 4px;
         }
-    }
 
-    .cyan-gradient { 
-        background: linear-gradient(to bottom, #00f3ff, #0891b2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-</style>
+        /* CARD STYLE */
+        .card-clinical {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 8px;
+        }
+        .card-clinical:hover {
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+            transform: translateY(-4px);
+        }
 
-<header class="min-h-screen flex flex-col justify-center px-6 py-20 max-w-7xl mx-auto hero-layout">
-    <div class="space-y-12 md:space-y-16">
-        <div class="mono-hud text-cyan-500 animate-pulse">// OS_LOAD_COMPLETE // MOBILE_TERM_ACTIVE</div>
+        /* NAV STYLES */
+        .nav-link { 
+            font-size: 0.85rem; 
+            font-weight: 500; 
+            color: var(--slate); 
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: var(--accent); }
+    </style>
+</head>
+<body class="selection:bg-blue-100 selection:text-blue-900">
 
-        <div class="space-y-8">
-            <h1 class="heading-arch">
-                SYSTEM_<br/>
-                <span class="cyan-gradient italic">OPTIMIZATION</span>
-            </h1>
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 py-5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-sm flex items-center justify-center">
+                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                </div>
+                <span class="text-xl font-bold tracking-tighter text-slate-900">MONUMENT_LABS</span>
+            </div>
+            <div class="hidden md:flex gap-10">
+                <a href="#platform" class="nav-link">PLATFORM</a>
+                <a href="#science" class="nav-link">SCIENCE</a>
+                <a href="#nodes" class="nav-link">GLOBAL NODES</a>
+                <a href="#investors" class="nav-link text-blue-600 font-semibold">PARTNERSHIP</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-32 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <div class="flex items-center gap-4">
+                    <span class="mono-tag">Powered by Norvoc Core</span>
+                    <span class="w-12 h-[1px] bg-slate-200"></span>
+                </div>
+                <h1 class="heading-clinical text-6xl md:text-8xl">
+                    Innovative <br/>
+                    <span class="text-blue-600 italic font-light">Human Systems.</span>
+                </h1>
+                <p class="text-xl text-slate-500 leading-relaxed max-w-lg font-light">
+                    Monument Labs optimizes human health and longevity through fresh, progressive biomedical design and state-of-the-art manufacturing.
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-slate-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-600 transition shadow-lg shadow-blue-900/10">
+                        View Science Report
+                    </button>
+                    <button class="border border-slate-200 text-slate-900 px-8 py-4 rounded-md font-medium hover:bg-slate-50 transition">
+                        Our Process
+                    </button>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="aspect-square bg-slate-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(var(--accent) 1px, transparent 1px); background-size: 24px 24px;"></div>
+                    <img src="https://images.unsplash.com/photo-1579154235602-3c480d19f26e?auto=format&fit=crop&q=80&w=800" alt="Laboratory Facility" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="platform" class="py-32 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mb-20 space-y-6">
+                <span class="mono-tag">Platform Overview</span>
+                <h2 class="heading-clinical text-4xl">Identifying the gaps in modern health science.</h2>
+                <p class="text-lg text-slate-500">We leverage Norvoc’s biomedical expertise to produce ethically sound, tangible healthcare options that make sense to the consumer.</p>
+            </div>
             
-            <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-4">
-                <div class="lg:col-span-5">
-                    <h2 class="mono-hud text-gray-400 tracking-[0.4em] lg:tracking-[0.6em]">
-                        THE HUMAN ARCHITECTURE.
-                    </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-clinical p-10 space-y-6">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="microscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight">R&D Integrity</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Our scientists drive a self-perpetuating think-space to foster original thought and bio-available technology.</p>
                 </div>
-                <div class="lg:col-span-7 border-accent lg:border-l-2 lg:border-cyan-500/30 lg:pl-8">
-                    <p class="text-sm md:text-xl font-light leading-relaxed text-gray-300 uppercase italic">
-                        The Institutional standard for longevity. We synthesize <span class="text-white font-bold">Norvoc_AI</span> with <span class="text-white font-bold">Katin_Protocols</span>.
-                    </p>
+                <div class="card-clinical p-10 space-y-6">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="activity"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight">Metabolism</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Optimization of cellular efficiency through Katin synthesis protocols and mitochondrial energy mapping.</p>
+                </div>
+                <div class="card-clinical p-10 space-y-6">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="factory"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight">Manufacturing</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">State-of-the-art facilities in Southern California and Singapore ensuring pharmaceutical-grade consistency.</p>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center pt-8 border-t border-white/5">
-            <button class="w-full md:w-auto bg-cyan-500 text-black px-12 py-5 mono-hud font-bold hover:bg-white transition shadow-[0_0_40px_rgba(0,243,255,0.2)]">
-                EXECUTE_PATCH
-            </button>
-            <div class="mono-hud text-gray-700 text-[10px]">
-                PORT: 8080 // NODE: IRVINE_CA // ENCRYPT: AES-256
+    <section id="investors" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-8">
+                <h2 class="heading-clinical text-5xl">Invested in human <br/> health and longevity.</h2>
+                <p class="text-slate-500 text-lg leading-relaxed">
+                    Our approach is authentically science-based. We invite strategic partners who value flexibility, imaginative thought, and technical excellence.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-900">
+                        <i data-lucide="check-circle-2" class="text-blue-600"></i>
+                        ETHICALLY SOUND PRACTICES
+                    </div>
+                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-900">
+                        <i data-lucide="check-circle-2" class="text-blue-600"></i>
+                        COLLABORATIVE CREATIVE EXPERTISE
+                    </div>
+                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-900">
+                        <i data-lucide="check-circle-2" class="text-blue-600"></i>
+                        PROVEN CLINICAL OUTCOMES
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-900 p-12 rounded-xl text-white space-y-8">
+                <div class="space-y-2">
+                    <h3 class="text-2xl font-bold">Partnership Manifest</h3>
+                    <p class="text-slate-400 text-sm">Request institutional access to our 2026-2030 Roadmap.</p>
+                </div>
+                <form class="space-y-4">
+                    <input type="text" placeholder="Full Name" class="w-full bg-slate-800 border border-slate-700 p-4 rounded text-sm focus:outline-none focus:border-blue-500 transition">
+                    <input type="email" placeholder="Institutional Email" class="w-full bg-slate-800 border border-slate-700 p-4 rounded text-sm focus:outline-none focus:border-blue-500 transition">
+                    <button class="w-full bg-blue-600 py-4 rounded font-bold text-sm tracking-widest uppercase hover:bg-blue-500 transition">Initialize Deep Sync</button>
+                </form>
             </div>
         </div>
-    </div>
-</header>
+    </section>
+
+    <footer class="py-20 border-t border-slate-100 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="space-y-4">
+                <span class="text-2xl font-bold tracking-tighter text-slate-900">MONUMENT_LABS</span>
+                <p class="text-xs text-slate-400 max-w-xs">Dedicated to the improvement of human health and longevity through innovative biomedical design. Copyright © 2026.</p>
+            </div>
+            <div class="flex gap-10 text-[10px] mono uppercase font-bold text-slate-500">
+                <a href="#" class="hover:text-blue-600">About</a>
+                <a href="#" class="hover:text-blue-600">Business</a>
+                <a href="#" class="hover:text-blue-600">Science</a>
+                <a href="#" class="hover:text-blue-600">Legal</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
