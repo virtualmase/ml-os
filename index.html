@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +12,19 @@
         .mono { font-family: 'JetBrains Mono', monospace; }
         .glow-blue { box-shadow: 0 0 40px rgba(37, 99, 235, 0.15); }
         .bg-grid { background-image: radial-gradient(circle, #1e293b 1px, transparent 1px); background-size: 40px 40px; }
+        
+        /* Scanner Effect */
         .scanner::after {
             content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
             background: linear-gradient(to right, transparent, #2563eb, transparent);
             animation: scan 4s linear infinite;
         }
         @keyframes scan { 0% { top: 0; } 100% { top: 100%; } }
+
+        /* Marquee Effect */
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { animation: marquee 30s linear infinite; }
+
         .stat-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.05); }
         .text-gradient { background: linear-gradient(to bottom right, #fff, #64748b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
@@ -37,8 +44,8 @@
             </div>
             <div class="hidden md:flex gap-8 text-[10px] mono uppercase tracking-widest font-bold text-slate-500">
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span> Node_Singapore: Active</span>
-                <span class="text-slate-700">|</span>
-                <a href="#science" class="hover:text-blue-400 transition-colors">VDR_Access</a>
+                <a href="#flywheel" class="hover:text-blue-400 transition-colors">Infrastructure</a>
+                <a href="#sync" class="hover:text-blue-400 transition-colors">VDR_Sync</a>
             </div>
             <button class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-2 rounded-sm text-xs font-bold mono uppercase tracking-widest transition-all">
                 Partner_Portal
@@ -46,24 +53,23 @@
         </div>
     </nav>
 
-    <main class="pt-48 pb-32 px-6">
+    <main class="pt-48 pb-10 px-6">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            
             <div class="space-y-10">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded border border-blue-500/20 bg-blue-500/5">
                     <i data-lucide="activity" class="w-4 h-4 text-blue-500"></i>
-                    <span class="text-[10px] mono uppercase text-blue-400 font-bold tracking-widest">Powered by Norvoc Core AI</span>
+                    <span class="text-[10px] mono uppercase text-blue-400 font-bold tracking-widest">System Status: Series A Deployment</span>
                 </div>
                 <h2 class="text-7xl font-black text-white tracking-tighter leading-[1.0] text-gradient">
-                    Architecture for <br>
+                    The Science of <br>
                     <span class="text-blue-600 italic">Continuity.</span>
                 </h2>
                 <p class="text-lg text-slate-400 leading-relaxed max-w-lg">
-                    We bridge the Biological Maintenance Gap. Monument integrates Katin Synthesis with predictive Norvoc AI to provide an institutional-grade operating system for human healthspan.
+                    Bridging the Biological Maintenance Gap. Monument integrates Katin Synthesis with predictive Norvoc AI to provide an institutional-grade operating system for human architecture.
                 </p>
                 <div class="flex gap-4">
-                    <button class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-sm font-bold mono uppercase tracking-widest transition-all shadow-lg shadow-blue-500/20">Initialize Sync</button>
-                    <button class="border border-slate-700 hover:border-blue-500 px-10 py-5 rounded-sm font-bold mono uppercase tracking-widest text-white transition-all">View Roadmap</button>
+                    <button onclick="document.getElementById('sync').scrollIntoView()" class="bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-sm font-bold mono uppercase tracking-widest transition-all shadow-lg shadow-blue-500/20">Initialize Sync</button>
+                    <button class="border border-slate-700 hover:border-blue-500 px-10 py-5 rounded-sm font-bold mono uppercase tracking-widest text-white transition-all">View Demo</button>
                 </div>
             </div>
 
@@ -81,68 +87,108 @@
                             <span class="text-[10px] mono text-blue-500">METABOLIC_AUDIT // ML-024</span>
                             <span class="text-[9px] px-2 py-0.5 bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">STATUS: OPTIMIZING</span>
                         </div>
-                        <div class="grid grid-cols-2 gap-6 mono text-[11px]">
-                            <div>
-                                <span class="text-slate-600 uppercase block mb-1">Mito_Efficiency</span>
-                                <span class="text-white text-lg font-bold">94.8%</span>
-                            </div>
-                            <div class="border-l border-white/5 pl-6">
-                                <span class="text-slate-600 uppercase block mb-1">Gap_Detected</span>
-                                <span class="text-amber-500 font-bold">NAD+ DEPLETION</span>
-                            </div>
-                        </div>
+                        
                         <div class="mt-6 text-[10px] text-slate-500 border-t border-white/5 pt-4 leading-relaxed italic">
-                            System Note: Katin Protocol ML-024 deployed. Anticipated cellular resilience increase of 14.2% within 72-hour cycle.
+                            System Note: Katin Protocol ML-024 deployed. Mitochondrial membrane stabilization active.
                         </div>
-                    </div>
-                    
-                    <div class="flex items-center gap-4 bg-blue-500/5 p-4 rounded border border-blue-500/10">
-                        <i data-lucide="zap" class="w-4 h-4 text-blue-500"></i>
-                        <span class="mono text-[11px] text-blue-400 tracking-tight">Katin Node: Batch ML-024 Synthesis Verified...</span>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <section class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="stat-card p-8 space-y-6">
-                <i data-lucide="brain" class="text-blue-500 w-8 h-8"></i>
-                <h3 class="text-white font-bold mono text-xs uppercase tracking-widest">Norvoc_Core</h3>
-                <p class="text-xs leading-relaxed text-slate-500">Predictive AI discovery engine. We identify systemic decay 24 months before clinical manifestation.</p>
+    <div class="bg-slate-900 border-y border-white/5 py-3 overflow-hidden">
+        <div class="flex whitespace-nowrap gap-12 animate-marquee mono text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500">
+            <span>[ NODE_01: ONLINE ]</span>
+            <span class="text-blue-500">BATCH_ML024: 99.8% PURITY</span>
+            <span>[ NODE_02: ACTIVE ]</span>
+            <span class="text-emerald-500">SYS_EFFICIENCY: +14.2%</span>
+            <span>[ NORVOC_CORE: SYNCED ]</span>
+            <span class="text-blue-500">DATA_POINTS: 1.2M+</span>
+            <span>[ HELSINKI_NODE: INITIALIZING ]</span>
+            <span class="text-amber-500">ALERT: NAD+ DEPLETION DETECTED // SECTOR 7</span>
+        </div>
+    </div>
+
+    <section id="flywheel" class="py-32 bg-[#020617] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <span class="mono text-blue-500 text-xs font-bold tracking-[0.4em] uppercase">Value Chain Vertical Integration</span>
+                <h2 class="text-5xl font-black text-white tracking-tighter mt-4">Closed-Loop <span class="text-blue-600 italic text-gradient">Optimization.</span></h2>
             </div>
-            <div class="stat-card p-8 space-y-6">
-                <i data-lucide="layers" class="text-blue-500 w-8 h-8"></i>
-                <h3 class="text-white font-bold mono text-xs uppercase tracking-widest">Katin_Synthesis</h3>
-                <p class="text-xs leading-relaxed text-slate-500">Proprietary molecular manufacturing. Modular delivery of bio-available interventions at scale.</p>
-            </div>
-            <div class="stat-card p-8 space-y-6">
-                <i data-lucide="globe" class="text-blue-500 w-8 h-8"></i>
-                <h3 class="text-white font-bold mono text-xs uppercase tracking-widest">Global_Nodes</h3>
-                <p class="text-xs leading-relaxed text-slate-500">Decentralized synthesis facilities in Irvine and Singapore ensuring absolute supply chain integrity.</p>
-            </div>
-            <div class="stat-card p-8 space-y-6">
-                <i data-lucide="bar-chart-3" class="text-blue-500 w-8 h-8"></i>
-                <h3 class="text-white font-bold mono text-xs uppercase tracking-widest">Unit_Economics</h3>
-                <p class="text-xs leading-relaxed text-slate-500">75% Gross Margins through vertical integration. $100M ARR roadmap for 2027.</p>
+            
+            
+
+            <div class="grid lg:grid-cols-3 gap-12 items-center relative mt-20">
+                <div class="stat-card p-8 rounded-2xl border-l-4 border-l-blue-600 group hover:bg-blue-600/5 transition-all">
+                    <h3 class="text-xl font-bold text-white mb-2">01 / Intake</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Norvoc Core AI maps systemic healthcare gaps by analyzing 1.2M+ genomic points in real-time.</p>
+                </div>
+                <div class="relative flex justify-center py-12 lg:py-0">
+                    <div class="w-48 h-48 rounded-full border border-blue-500/20 flex items-center justify-center relative glow-blue">
+                        <div class="absolute inset-0 border-t-2 border-blue-500 rounded-full animate-spin [animation-duration:10s]"></div>
+                        <i data-lucide="refresh-cw" class="text-blue-500 w-10 h-10"></i>
+                    </div>
+                </div>
+                <div class="stat-card p-8 rounded-2xl border-r-4 border-r-blue-600 lg:text-right group hover:bg-blue-600/5 transition-all">
+                    <h3 class="text-xl font-bold text-white mb-2">02 / Synthesis</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Proprietary Katin Protocols translate data into bio-available molecular patches at our Global Nodes.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 border-t border-white/5 text-center mono">
-        <div class="flex justify-center gap-12 mb-8 opacity-40 grayscale">
-            <span class="text-[9px] font-bold tracking-[0.4em]">GMP_CERTIFIED</span>
-            <span class="text-[9px] font-bold tracking-[0.4em]">ISO_9001</span>
-            <span class="text-[9px] font-bold tracking-[0.4em]">SECURE_VDR</span>
+    <section class="py-24 border-t border-white/5 bg-[#020617]">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-white tracking-tighter mb-12 uppercase">Biological Evidence</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="stat-card p-10 rounded-2xl">
+                    <h4 class="mono text-blue-500 text-xs mb-6 font-bold uppercase tracking-widest">Protocol ML-024 Intervention</h4>
+                    
+                </div>
+                <div class="stat-card p-10 rounded-2xl">
+                    <h4 class="mono text-blue-500 text-xs mb-6 font-bold uppercase tracking-widest">Molecular Target: ATP Stabilization</h4>
+                    
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="sync" class="py-32 px-6 bg-[#020617] relative border-t border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="mono text-blue-500 text-xs font-bold tracking-[0.5em] uppercase">Phase 03 // Institutional Onboarding</span>
+                <h2 class="text-5xl font-black text-white tracking-tighter">Initialize_Sync.</h2>
+            </div>
+
+            <div class="stat-card p-10 rounded-2xl border border-white/10 glow-blue">
+                <form class="space-y-10">
+                    <div class="space-y-6">
+                        <label class="mono text-[10px] text-blue-500 font-bold uppercase tracking-widest">01_Entity_Classification</label>
+                        <div class="grid grid-cols-3 gap-4">
+                            <button type="button" class="border border-slate-700 p-4 rounded text-[10px] mono text-white hover:border-blue-500 font-bold">VC</button>
+                            <button type="button" class="border border-slate-700 p-4 rounded text-[10px] mono text-white hover:border-blue-500 font-bold">HEALTH_SYS</button>
+                            <button type="button" class="border border-slate-700 p-4 rounded text-[10px] mono text-white hover:border-blue-500 font-bold">FAMILY_OFFICE</button>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <label class="mono text-[10px] text-blue-500 font-bold uppercase tracking-widest">02_Comm_Link</label>
+                        <div class="flex gap-4">
+                            <input type="email" placeholder="INSTITUTIONAL_EMAIL_REQUIRED" class="bg-[#020617] border border-slate-700 p-4 rounded flex-1 text-xs mono text-white outline-none focus:border-blue-500">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white px-8 rounded font-bold mono text-xs uppercase tracking-widest transition-all">Request_VDR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center mono">
         <p class="text-[10px] text-slate-700 tracking-[0.4em] uppercase font-bold">
-            Monument Labs Systems // Advanced Human Infrastructure
+            Monument Labs Systems // Irvine • Singapore • Helsinki
         </p>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
