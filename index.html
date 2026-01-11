@@ -12,7 +12,7 @@
     
     <style>
         :root { --neon-blue: #00f3ff; --dark-bg: #030712; }
-        body { background-color: var(--dark-bg); color: #94a3b8; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--dark-bg); color: #94a3b8; font-family: 'Inter', sans-serif; letter-spacing: -0.01em; }
         .mono { font-family: 'Fira Code', monospace; }
         .heading { font-family: 'Cinzel', serif; letter-spacing: 0.15em; color: white; }
 
@@ -27,6 +27,9 @@
         .hud-border { border: 1px solid rgba(0, 243, 255, 0.15); transition: all 0.3s ease; background: rgba(15, 23, 42, 0.2); backdrop-filter: blur(8px); }
         .hud-border:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 243, 255, 0.05); }
         .cyan-gradient { background: linear-gradient(180deg, #00f3ff 0%, #0891b2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @keyframes pulse-cyan { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+        .animate-status { animation: pulse-cyan 3s infinite; }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -35,4 +38,169 @@
     <nav class="fixed top-0 w-full z-50 bg-black/90 border-b border-cyan-900/30 backdrop-blur-xl px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center text-xs mono">
             <div class="heading text-xl font-bold flex items-center gap-3 tracking-widest text-white">
-                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_#0
+                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_#00f3ff]"></div>
+                MONUMENT_LABS
+            </div>
+            <div class="hidden lg:flex gap-10 uppercase tracking-widest text-gray-500">
+                <a href="#01" class="hover:text-cyan-400 transition">[[01] Architecture]</a>
+                <a href="#02" class="hover:text-cyan-400 transition">[[02] Business]</a>
+                <a href="#03" class="hover:text-cyan-400 transition">[[03] Intervention]</a>
+            </div>
+            <div class="text-cyan-500 border-l border-cyan-900/50 pl-6 uppercase font-bold tracking-tighter">
+                OS_v2026.01 // NODE: 33.68° N
+            </div>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex flex-col justify-center px-6 pt-24 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-10">
+                <div class="inline-block px-3 py-1 border border-cyan-500/30 bg-cyan-500/5 mono text-[10px] text-cyan-400 tracking-[0.4em] animate-status uppercase">
+                    Protocol: Deploying_Peak_State
+                </div>
+                <div class="space-y-2">
+                    <h1 class="text-6xl md:text-8xl font-black heading leading-none text-white tracking-tighter uppercase">SYSTEM_<br/>OPTIMIZATION</h1>
+                    <h2 class="text-3xl md:text-5xl cyan-gradient italic font-light heading tracking-tight">// THE HUMAN ARCHITECTURE.</h2>
+                </div>
+                <p class="text-gray-400 text-lg max-w-xl leading-relaxed border-l-2 border-cyan-500/40 pl-8">
+                    The institutional standard for longevity. Utilizing <strong>Norvoc_Core</strong> predictive intelligence to audit metabolic decay and <strong>Katin_Synthesis</strong> to deploy precision molecular patches.
+                </p>
+                <div class="flex flex-wrap gap-6 pt-6">
+                    <a href="#manifest" class="bg-cyan-500 text-black px-10 py-4 mono text-xs font-bold hover:bg-white transition uppercase tracking-widest shadow-[0_0_30px_rgba(0,243,255,0.2)]">EXECUTE_SYSTEM_PATCH</a>
+                    <button class="border border-gray-700 px-10 py-4 mono text-xs text-gray-500 hover:border-white hover:text-white transition uppercase tracking-widest">VIEW_BLUEPRINTS</button>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="hud-border p-8 space-y-8 overflow-hidden">
+                    <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-4 mono text-[10px]">
+                        <span class="text-cyan-500 uppercase font-bold">Structural_Integrity_Audit</span>
+                        <span class="text-gray-600">REF: #ML-2026-ALPHA</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-[9px] mono uppercase"><span class="text-gray-500">ATP_Flux</span><span class="text-cyan-400">+28.4%</span></div>
+                            <div class="w-full bg-gray-800 h-[2px]"><div class="bg-cyan-400 h-full w-[85%]"></div></div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="flex justify-between text-[9px] mono uppercase"><span class="text-gray-500">Bio_Stability</span><span class="text-cyan-400">99.2%</span></div>
+                            <div class="w-full bg-gray-800 h-[2px]"><div class="bg-cyan-400 h-full w-[99%]"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="01" class="py-32 px-6 bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="mono text-cyan-500 mb-12 flex items-center gap-4">
+                <span class="w-8 h-[1px] bg-cyan-500"></span>
+                [[01] FOUNDATION_THESIS // THE_LONGEVITY_ECONOMY]
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6">
+                    <h3 class="heading text-3xl text-white tracking-widest leading-tight">BRIDGING THE <span class="cyan-gradient">LONGEVITY_GAP.</span></h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Traditional medicine is reactive. Monument Labs is <span class="text-white">predictive</span>. By leveraging AI-driven digital phenotyping, we identify sub-clinical gaps in the human architecture before they manifest as critical failures. We treat health as a continuous system optimization.
+                    </p>
+                    <div class="hud-border p-6 bg-cyan-500/5 mono">
+                        <p class="text-[10px] text-cyan-400 font-bold mb-2 uppercase">// 2026_MARKET_EDGE</p>
+                        <p class="text-[11px] text-gray-500 uppercase leading-relaxed font-medium">Micro-Pharma Efficiency: Shortening molecule-to-market latency by 75% compared to legacy institutional models.</p>
+                    </div>
+                </div>
+                <div class="hud-border p-4 relative group overflow-hidden">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="02" class="py-32 px-6 border-t border-cyan-900/30">
+        <div class="max-w-7xl mx-auto text-center mb-20">
+            <h3 class="heading text-4xl mb-4">GLOBAL_COMPUTE_NODES</h3>
+            <p class="mono text-xs text-gray-500 tracking-[0.3em] uppercase">Distributed Infrastructure for Molecular Excellence</p>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="hud-border p-8 space-y-6 bg-black/40">
+                <div class="flex items-center gap-3"><span class="text-cyan-400 mono text-lg">PROT_01: R&D</span></div>
+                <p class="text-xs text-gray-500 leading-relaxed uppercase">Predictive gap analysis identifying revenue opportunities in the $3.7tn wellness market via Norvoc_Core intelligence.</p>
+            </div>
+            <div class="hud-border p-8 space-y-6 bg-black/40 border-cyan-400/50 shadow-[0_0_20px_rgba(0,243,255,0.05)]">
+                <div class="flex items-center gap-3"><span class="text-green-400 mono text-lg">PROT_02: MFG</span></div>
+                <p class="text-xs text-gray-500 leading-relaxed uppercase">Singapore Node: Quantum synthesis manufacturing designed to mitigate 2026 global trade and tariff volatility.</p>
+            </div>
+            <div class="hud-border p-8 space-y-6 bg-black/40">
+                <div class="flex items-center gap-3"><span class="text-cyan-400 mono text-lg">PROT_03: AUDIT</span></div>
+                <p class="text-xs text-gray-500 leading-relaxed uppercase">Institutional testing ensuring 99.8% biological integrity via mass spectrometry and stability stress-tests.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="03" class="py-32 px-6 border-t border-cyan-900/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="hud-border p-8 bg-zinc-900/30">
+                    <div class="border-b border-cyan-900/50 pb-4 mb-8 flex justify-between mono text-[10px]">
+                        <span class="text-cyan-400">LOG_001 // MITOCHONDRIAL_PATCH</span>
+                        <span class="text-green-500">SUCCESS_VERIFIED</span>
+                    </div>
+                    
+                </div>
+                <div class="space-y-8">
+                    <h3 class="heading text-3xl text-white">ETHICAL_LEADERSHIP</h3>
+                    <p class="text-sm text-gray-400 uppercase leading-relaxed font-light">
+                        We avoid "science fiction" hype. We deploy biology-aligned solutions. Our focus remains on antibody-oligonucleotide conjugates and digital tools that serve the common good of human continuity.
+                    </p>
+                    <ul class="text-[11px] mono space-y-4 text-cyan-600 uppercase">
+                        <li>> IRB-Approved Research Frameworks</li>
+                        <li>> Sustainable Supply Chain Logic</li>
+                        <li>> Inclusive Longevity Access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="manifest" class="py-32 px-6 bg-cyan-950/10 border-t border-cyan-500/20 text-center">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="space-y-4">
+                <div class="mono text-cyan-500 text-xs tracking-[0.5em] uppercase">// SECURE_ACCESS</div>
+                <h2 class="heading text-4xl text-white uppercase">Initialize_Deep_Sync</h2>
+                <p class="text-gray-500 mono text-[10px] uppercase tracking-widest max-w-lg mx-auto">Request institutional access to the 2026-2030 Clinical Roadmap and Partnership Manifest.</p>
+            </div>
+            <div class="hud-border p-8 bg-black/60 max-w-md mx-auto">
+                <form class="space-y-6 text-left">
+                    <div>
+                        <label class="mono text-[9px] text-cyan-700 uppercase mb-2 block">Entity_Identity</label>
+                        <input type="text" class="w-full bg-zinc-900 border border-cyan-900/50 p-3 mono text-xs text-cyan-400 focus:border-cyan-400 outline-none" placeholder="IDENTIFIER">
+                    </div>
+                    <div>
+                        <label class="mono text-[9px] text-cyan-700 uppercase mb-2 block">Communication_Link</label>
+                        <input type="email" class="w-full bg-zinc-900 border border-cyan-900/50 p-3 mono text-xs text-cyan-400 focus:border-cyan-400 outline-none" placeholder="LINK@SECURE.COM">
+                    </div>
+                    <button type="submit" class="w-full bg-cyan-600/20 border border-cyan-400 py-4 mono text-cyan-400 text-xs font-bold hover:bg-cyan-400 hover:text-black transition uppercase tracking-widest">INITIALIZE_SYNC</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-black border-t border-cyan-900/30 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 text-[10px] mono uppercase tracking-tight">
+            <div class="space-y-6">
+                <div class="heading text-xl text-white tracking-widest">MONUMENT_LABS</div>
+                <p class="text-gray-600 leading-relaxed">The Institutional OS for Human Architecture. Bridging genomic potential and phenotypic reality.</p>
+            </div>
+            <div class="space-y-4"><h5 class="text-cyan-500 font-bold tracking-widest">// LOCATIONS</h5><p class="text-gray-500">Irvine // 33.68° N<br>Singapore // 1.35° N<br>Helsinki // 60.16° N</p></div>
+            <div class="space-y-4"><h5 class="text-cyan-500 font-bold tracking-widest">// AIO_INDEX</h5><p class="text-gray-700 opacity-40 hover:opacity-100 transition-opacity">Longevity Biotech, Peptide Synthesis, Mitochondrial Logic, AI Bio-Design.</p></div>
+            <div class="space-y-4"><h5 class="text-cyan-500 font-bold tracking-widest">// SECURITY</h5><div class="p-3 border border-cyan-900/50 text-white">AES-256_ACTIVE</div></div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-zinc-900 text-[9px] text-gray-700 flex justify-between">
+            <span>© 2026 MONUMENT_LABS</span>
+            <div class="flex gap-6 uppercase"><span>Privacy_Protocol</span><span>Terms_of_Use</span></div>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons(); console.log("MONUMENT_OS: System Boot Complete.");</script>
+</body>
+</html>
