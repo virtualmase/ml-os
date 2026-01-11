@@ -3,200 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MONUMENT_LABS // Longevity & Human Optimization</title>
+    <meta name="description" content="Monument Labs: The Science Hub for Human Optimization. Powered by Norvoc Core.">
+    <title>MONUMENT_LABS // Science & Human Systems</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <style>
-        :root { 
-            --navy: #0f172a; 
-            --slate: #334155;
-            --accent: #2563eb; /* Norvoc-style Clinical Blue */
-            --bg: #ffffff; 
-        }
-        body { 
-            background-color: var(--bg); 
-            color: var(--slate); 
-            font-family: 'Inter', sans-serif; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* HEADER REFINEMENT */
-        .heading-clinical { 
-            font-weight: 700; 
-            letter-spacing: -0.03em; 
-            color: var(--navy); 
-            line-height: 1.1;
-        }
-
-        .mono-tag { 
-            font-family: 'JetBrains Mono', monospace; 
-            text-transform: uppercase; 
-            font-size: 0.7rem; 
-            letter-spacing: 0.15em;
-            color: var(--accent);
-            background: rgba(37, 99, 235, 0.05);
-            padding: 4px 12px;
-            border-radius: 4px;
-        }
-
-        /* CARD STYLE */
-        .card-clinical {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-radius: 8px;
-        }
-        .card-clinical:hover {
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
-            transform: translateY(-4px);
-        }
-
-        /* NAV STYLES */
-        .nav-link { 
-            font-size: 0.85rem; 
-            font-weight: 500; 
-            color: var(--slate); 
-            transition: color 0.2s;
-        }
-        .nav-link:hover { color: var(--accent); }
+        :root { --navy: #0f172a; --accent: #2563eb; --bg: #ffffff; --glass: rgba(255, 255, 255, 0.8); }
+        body { background-color: var(--bg); color: #334155; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .heading-clinical { font-weight: 700; letter-spacing: -0.03em; color: var(--navy); line-height: 1.1; }
+        .mono-tag { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--accent); background: rgba(37, 99, 235, 0.08); padding: 4px 10px; border-radius: 4px; font-weight: 600; }
+        .card-clinical { background: #ffffff; border: 1px solid #f1f5f9; transition: all 0.4s ease; border-radius: 12px; }
+        .card-clinical:hover { border-color: var(--accent); box-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.08); transform: translateY(-4px); }
+        .gradient-text { background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="selection:bg-blue-100 selection:text-blue-900">
+<body>
 
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 py-5">
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 px-6 py-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-blue-600 rounded-sm flex items-center justify-center">
-                    <div class="w-3 h-3 bg-white rounded-full"></div>
-                </div>
-                <span class="text-xl font-bold tracking-tighter text-slate-900">MONUMENT_LABS</span>
+                <div class="w-7 h-7 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-xs">M</div>
+                <span class="text-lg font-bold tracking-tighter text-slate-900">MONUMENT_LABS</span>
             </div>
-            <div class="hidden md:flex gap-10">
-                <a href="#platform" class="nav-link">PLATFORM</a>
-                <a href="#science" class="nav-link">SCIENCE</a>
-                <a href="#nodes" class="nav-link">GLOBAL NODES</a>
-                <a href="#investors" class="nav-link text-blue-600 font-semibold">PARTNERSHIP</a>
+            <div class="hidden lg:flex gap-8 items-center text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#hub" class="hover:text-blue-600 transition">Science Hub</a>
+                <a href="#innovations" class="hover:text-blue-600 transition">Innovations</a>
+                <a href="#process" class="hover:text-blue-600 transition">Process</a>
+                <a href="#investors" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-slate-900 transition">Initialize Sync</a>
             </div>
         </div>
     </nav>
 
-    <header class="pt-48 pb-32 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-            <div class="space-y-10">
-                <div class="flex items-center gap-4">
-                    <span class="mono-tag">Powered by Norvoc Core</span>
-                    <span class="w-12 h-[1px] bg-slate-200"></span>
+    <header class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="flex items-center gap-3">
+                    <span class="mono-tag">Institutional Roadmap 2026-2030</span>
                 </div>
-                <h1 class="heading-clinical text-6xl md:text-8xl">
-                    Innovative <br/>
-                    <span class="text-blue-600 italic font-light">Human Systems.</span>
+                <h1 class="heading-clinical text-5xl md:text-7xl">
+                    Standardizing <br/> <span class="gradient-text">Biological Excellence.</span>
                 </h1>
-                <p class="text-xl text-slate-500 leading-relaxed max-w-lg font-light">
-                    Monument Labs optimizes human health and longevity through fresh, progressive biomedical design and state-of-the-art manufacturing.
+                <p class="text-lg text-slate-500 leading-relaxed max-w-lg font-light">
+                    Bridging healthcare gaps through AI-driven R&D, proprietary <strong>Katin Synthesis</strong>, and predictive metabolic energy mapping. Powered by Norvoc’s institutional expertise.
                 </p>
-                <div class="flex gap-4">
-                    <button class="bg-slate-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-600 transition shadow-lg shadow-blue-900/10">
-                        View Science Report
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 transition flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-4 h-4"></i> View Science Report
                     </button>
-                    <button class="border border-slate-200 text-slate-900 px-8 py-4 rounded-md font-medium hover:bg-slate-50 transition">
+                    <button class="border border-slate-200 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-slate-50 transition">
                         Our Process
                     </button>
                 </div>
             </div>
-            <div class="relative">
-                <div class="aspect-square bg-slate-50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(var(--accent) 1px, transparent 1px); background-size: 24px 24px;"></div>
-                    <img src="https://images.unsplash.com/photo-1579154235602-3c480d19f26e?auto=format&fit=crop&q=80&w=800" alt="Laboratory Facility" class="w-full h-full object-cover mix-blend-multiply opacity-80">
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-blue-500/5 blur-3xl group-hover:bg-blue-500/10 transition"></div>
+                <div class="relative card-clinical overflow-hidden aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1532187875605-1ef6c237f1f0?auto=format&fit=crop&q=80&w=1200" alt="Molecular Research Facility" class="w-full h-full object-cover">
+                    <div class="absolute bottom-6 left-6 right-6 p-6 bg-white/90 backdrop-blur shadow-2xl rounded-lg">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-[10px] font-bold uppercase text-blue-600">Real-Time Data Feed</span>
+                            <span class="text-[10px] text-slate-400">Node: Irvine, CA</span>
+                        </div>
+                        <div class="text-sm font-semibold text-slate-900">Katin Protocol Stability: 99.8% Efficiency Verified.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="platform" class="py-32 bg-slate-50 border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl mb-20 space-y-6">
-                <span class="mono-tag">Platform Overview</span>
-                <h2 class="heading-clinical text-4xl">Identifying the gaps in modern health science.</h2>
-                <p class="text-lg text-slate-500">We leverage Norvoc’s biomedical expertise to produce ethically sound, tangible healthcare options that make sense to the consumer.</p>
+    <section id="hub" class="py-24 bg-slate-50 border-y border-slate-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="space-y-4">
+                    <span class="mono-tag">01 // Science Hub</span>
+                    <h2 class="heading-clinical text-4xl">Unlocking the Longevity Code.</h2>
+                </div>
+                <a href="#" class="text-blue-600 font-bold text-sm hover:underline">Explore Full Glossary →</a>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card-clinical p-10 space-y-6">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                        <i data-lucide="microscope"></i>
+                <article class="card-clinical p-8 space-y-6">
+                    <h3 class="text-lg font-bold text-slate-900">What is Katin Synthesis?</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">A proprietary approach to metabolic protocols that targets cellular resilience at the source. Optimized for bio-availability.</p>
+                    
+                </article>
+                <article class="card-clinical p-8 space-y-6">
+                    <h3 class="text-lg font-bold text-slate-900">Predictive Longevity</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">How Norvoc Core uses AI to identify systematic healthcare gaps before they manifest as biological failure.</p>
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-blue-600 font-bold">
+                        <span>Read Case Study</span>
+                        <i data-lucide="arrow-right" class="w-3 h-3"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight">R&D Integrity</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Our scientists drive a self-perpetuating think-space to foster original thought and bio-available technology.</p>
-                </div>
-                <div class="card-clinical p-10 space-y-6">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                        <i data-lucide="activity"></i>
+                </article>
+                <div class="bg-blue-600 rounded-xl p-8 text-white flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <i data-lucide="download-cloud" class="w-10 h-10 opacity-50"></i>
+                        <h3 class="text-xl font-bold leading-tight">2026-2030 Roadmap <br/> Gated Access.</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight">Metabolism</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">Optimization of cellular efficiency through Katin synthesis protocols and mitochondrial energy mapping.</p>
-                </div>
-                <div class="card-clinical p-10 space-y-6">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center">
-                        <i data-lucide="factory"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 uppercase tracking-tight">Manufacturing</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">State-of-the-art facilities in Southern California and Singapore ensuring pharmaceutical-grade consistency.</p>
+                    <button class="mt-8 bg-white text-blue-600 py-3 rounded font-bold text-xs uppercase tracking-widest hover:bg-slate-900 hover:text-white transition">Request Manifest</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="investors" class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-            <div class="space-y-8">
-                <h2 class="heading-clinical text-5xl">Invested in human <br/> health and longevity.</h2>
-                <p class="text-slate-500 text-lg leading-relaxed">
-                    Our approach is authentically science-based. We invite strategic partners who value flexibility, imaginative thought, and technical excellence.
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-900">
-                        <i data-lucide="check-circle-2" class="text-blue-600"></i>
-                        ETHICALLY SOUND PRACTICES
+    <section id="innovations" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+                <span class="mono-tag">02 // Portfolio</span>
+                <h2 class="heading-clinical text-4xl">Evidence-Based Outcomes.</h2>
+                <p class="text-slate-500">From metabolic mapping to consumer-ready health kits, our innovations are validated by real-world trials.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="flex gap-8 items-center card-clinical p-8">
+                    <div class="w-32 h-32 bg-slate-100 rounded-lg flex-shrink-0"></div>
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold text-blue-600">METABOLIC KIT v1.2</div>
+                        <h4 class="text-xl font-bold">Home Health Monitoring</h4>
+                        <p class="text-xs text-slate-400">Integrated with Norvoc’s predictive analytics for weekly biological feedback.</p>
                     </div>
-                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-900">
-                        <i data-lucide="check-circle-2" class="text-blue-600"></i>
-                        COLLABORATIVE CREATIVE EXPERTISE
-                    </div>
-                    <div class="flex items-center gap-4 text-sm font-semibold text-slate-900">
-                        <i data-lucide="check-circle-2" class="text-blue-600"></i>
-                        PROVEN CLINICAL OUTCOMES
+                </div>
+                <div class="flex gap-8 items-center card-clinical p-8">
+                    <div class="w-32 h-32 bg-slate-100 rounded-lg flex-shrink-0"></div>
+                    <div class="space-y-2">
+                        <div class="text-xs font-bold text-blue-600">PEPTIDE OPTIMIZATION</div>
+                        <h4 class="text-xl font-bold">Mitochondrial Support</h4>
+                        <p class="text-xs text-slate-400">Anonymized trials show a 15% increase in ATP flux over 90 days.</p>
                     </div>
                 </div>
             </div>
-            <div class="bg-slate-900 p-12 rounded-xl text-white space-y-8">
+        </div>
+    </section>
+
+    <section id="investors" class="py-24 bg-slate-900 text-white px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-10">
+                <span class="mono-tag !bg-blue-600 !text-white">Join the Think-Space</span>
+                <h2 class="heading-clinical text-white text-5xl">Collaborative CREATIVE expertise.</h2>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    We foster a self-perpetuating think-space. Whether you are an institutional partner or a longevity enthusiast, initialize your deep-sync today.
+                </p>
+                <div class="flex gap-10">
+                    <div class="space-y-2">
+                        <div class="text-3xl font-bold">314B</div>
+                        <div class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Longevity Market 2030</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-3xl font-bold">98.7%</div>
+                        <div class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Gap Detection Accuracy</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-2xl text-slate-900 space-y-8">
                 <div class="space-y-2">
                     <h3 class="text-2xl font-bold">Partnership Manifest</h3>
-                    <p class="text-slate-400 text-sm">Request institutional access to our 2026-2030 Roadmap.</p>
+                    <p class="text-sm text-slate-500">Initialize deep sync for exclusive roadmaps and webinars.</p>
                 </div>
                 <form class="space-y-4">
-                    <input type="text" placeholder="Full Name" class="w-full bg-slate-800 border border-slate-700 p-4 rounded text-sm focus:outline-none focus:border-blue-500 transition">
-                    <input type="email" placeholder="Institutional Email" class="w-full bg-slate-800 border border-slate-700 p-4 rounded text-sm focus:outline-none focus:border-blue-500 transition">
-                    <button class="w-full bg-blue-600 py-4 rounded font-bold text-sm tracking-widest uppercase hover:bg-blue-500 transition">Initialize Deep Sync</button>
+                    <input type="text" placeholder="Full Name" class="w-full border-b border-slate-200 py-4 focus:border-blue-600 outline-none transition">
+                    <input type="email" placeholder="Institutional Email" class="w-full border-b border-slate-200 py-4 focus:border-blue-600 outline-none transition">
+                    <button class="w-full bg-blue-600 text-white py-5 rounded-lg font-bold uppercase tracking-[0.2em] text-xs hover:bg-slate-900 transition">Initialize Deep Sync</button>
                 </form>
+                <div class="text-center">
+                    <a href="#" class="text-[10px] font-bold text-slate-400 uppercase tracking-widest hover:text-blue-600">Upcoming Webinar: May 12, 2026</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-slate-100 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-            <div class="space-y-4">
-                <span class="text-2xl font-bold tracking-tighter text-slate-900">MONUMENT_LABS</span>
-                <p class="text-xs text-slate-400 max-w-xs">Dedicated to the improvement of human health and longevity through innovative biomedical design. Copyright © 2026.</p>
+    <footer class="py-20 px-6 border-t border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2 space-y-6">
+                    <span class="text-xl font-bold tracking-tighter text-slate-900">MONUMENT_LABS</span>
+                    <p class="text-sm text-slate-500 max-w-xs leading-loose">The Institutional OS for Human Architecture. Bridging genomic potential and phenotypic reality through ethically sound biomedical design.</p>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="text-xs font-bold text-slate-900 uppercase">Information</h5>
+                    <ul class="space-y-2 text-xs text-slate-500">
+                        <li><a href="#" class="hover:text-blue-600">Science Hub</a></li>
+                        <li><a href="#" class="hover:text-blue-600">FAQ</a></li>
+                        <li><a href="#" class="hover:text-blue-600">Whitepapers</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h5 class="text-xs font-bold text-slate-900 uppercase">Global Nodes</h5>
+                    <ul class="space-y-2 text-xs text-slate-500">
+                        <li>Irvine, CA</li>
+                        <li>Singapore</li>
+                        <li>Helsinki</li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex gap-10 text-[10px] mono uppercase font-bold text-slate-500">
-                <a href="#" class="hover:text-blue-600">About</a>
-                <a href="#" class="hover:text-blue-600">Business</a>
-                <a href="#" class="hover:text-blue-600">Science</a>
-                <a href="#" class="hover:text-blue-600">Legal</a>
+            <div class="pt-8 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest">Copyright © 2026 Monument Labs Bioscience.</p>
+                <div class="flex gap-6 text-[10px] font-bold text-slate-400">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Accessibility</a>
+                </div>
             </div>
         </div>
     </footer>
