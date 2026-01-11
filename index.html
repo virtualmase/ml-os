@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MONUMENT_LABS // System Optimization for Human Architecture. Blending Norvoc intelligence and Katin molecular synthesis.">
+    <meta name="description" content="Monument Labs: Institutional Bioscience OS. Bridging medical gaps via Norvoc Intelligence and Katin Molecular Synthesis.">
     <title>MONUMENT_LABS // System Optimization OS</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,20 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Inter:wght@300;400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --neon-blue: #00f3ff;
-            --dark-bg: #030712;
-            --os-cobalt: #0f172a;
-        }
-        body {
-            background-color: var(--dark-bg);
-            color: #94a3b8;
-            font-family: 'Inter', sans-serif;
-        }
+        :root { --neon-blue: #00f3ff; --dark-bg: #030712; }
+        body { background-color: var(--dark-bg); color: #94a3b8; font-family: 'Inter', sans-serif; }
         .mono { font-family: 'Fira Code', monospace; }
         .heading { font-family: 'Cinzel', serif; letter-spacing: 0.15em; color: white; }
 
-        /* CRT Terminal Effect */
         .scanlines {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
@@ -33,216 +24,15 @@
             pointer-events: none; z-index: 50;
         }
 
-        .hud-border { border: 1px solid rgba(0, 243, 255, 0.15); transition: all 0.3s ease; }
+        .hud-border { border: 1px solid rgba(0, 243, 255, 0.15); transition: all 0.3s ease; background: rgba(15, 23, 42, 0.2); backdrop-filter: blur(8px); }
         .hud-border:hover { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 243, 255, 0.05); }
-        
-        .glow-text { text-shadow: 0 0 10px rgba(0, 243, 255, 0.5); }
         .cyan-gradient { background: linear-gradient(180deg, #00f3ff 0%, #0891b2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-
-        @keyframes pulse-slow { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.8; } }
-        .animate-pulse-slow { animation: pulse-slow 4s infinite; }
     </style>
 </head>
 <body class="overflow-x-hidden">
     <div class="scanlines"></div>
 
-    <nav class="fixed top-0 w-full z-40 bg-black/90 border-b border-cyan-900/30 backdrop-blur-xl px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="heading text-xl font-bold flex items-center gap-3">
-                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_#00f3ff]"></div>
-                MONUMENT_LABS
-            </div>
-            <div class="hidden lg:flex gap-10 mono text-[10px] uppercase tracking-widest text-gray-400">
-                <a href="#01" class="hover:text-cyan-400 transition">[[01] Architecture]</a>
-                <a href="#02" class="hover:text-cyan-400 transition">[[02] Nodes]</a>
-                <a href="#03" class="hover:text-cyan-400 transition">[[03] Intelligence]</a>
-            </div>
-            <div class="mono text-[10px] text-cyan-500 hidden sm:block border-l border-cyan-900/50 pl-6 uppercase">
-                System: Operational // Node: 33.68° N
-            </div>
-        </div>
-    </nav>
-
-    <section id="00" class="min-h-screen flex flex-col justify-center px-6 pt-20 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <div class="mono text-cyan-500 text-xs tracking-[0.5em] animate-pulse">// PEAK_PERFORMANCE_PROTOCOL_INIT</div>
-                
-                <h1 class="text-5xl md:text-7xl lg:text-8xl heading leading-[0.85] tracking-tighter text-white">
-                    SYSTEM_OPTIMIZATION <br/>
-                    <span class="cyan-gradient italic text-4xl md:text-6xl lg:text-7xl">
-                        // THE HUMAN ARCHITECTURE.
-                    </span>
-                </h1>
-
-                <p class="text-gray-400 text-lg max-w-xl leading-relaxed border-l-2 border-cyan-500/30 pl-6">
-                    Standardizing biological excellence through <strong>Norvoc</strong> predictive intelligence and <strong>Katin</strong> molecular synthesis. We identify failures in your biological source code and deploy institutional system patches.
-                </p>
-
-                <div class="flex gap-4 pt-4">
-                    <button class="bg-cyan-600/10 border border-cyan-500 px-8 py-4 mono text-cyan-400 text-xs font-bold hover:bg-cyan-500 hover:text-black transition uppercase tracking-widest shadow-[0_0_20px_rgba(0,243,255,0.15)]">
-                        Execute_System_Patch
-                    </button>
-                    <button class="border border-gray-700 px-8 py-4 mono text-xs text-gray-500 hover:border-white hover:text-white transition uppercase tracking-widest">
-                        View_Blueprints
-                    </button>
-                </div>
-            </div>
-
-            <div class="hud-border p-8 bg-os-cobalt/20 backdrop-blur-sm space-y-8 relative overflow-hidden">
-                <div class="flex justify-between items-center mb-6">
-                    <div class="mono text-[10px] text-cyan-500/50 tracking-widest font-bold">BIOMETRIC_FEED_V2.06</div>
-                    <div class="flex gap-1">
-                        <span class="w-1 h-3 bg-cyan-900"></span><span class="w-1 h-3 bg-cyan-700"></span><span class="w-1 h-3 bg-cyan-400"></span>
-                    </div>
-                </div>
-
-                
-
-                <div class="grid grid-cols-2 gap-8 pt-6">
-                    <div class="space-y-2">
-                        <p class="text-[9px] mono uppercase text-gray-500">Mitochondrial_Wattage</p>
-                        <p class="text-3xl heading text-cyan-400">+28.4%</p>
-                        <div class="w-full bg-gray-800 h-[1px] shadow-[0_0_10px_rgba(0,243,255,0.2)]">
-                            <div class="bg-cyan-400 h-full w-[85%]"></div>
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="text-[9px] mono uppercase text-gray-500">Epigenetic_Stability</p>
-                        <p class="text-3xl heading text-cyan-400">99.2%</p>
-                        <div class="w-full bg-gray-800 h-[1px]">
-                            <div class="bg-cyan-400 h-full w-[98%]"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="01" class="py-32 px-6 bg-zinc-950/50">
-        <div class="max-w-7xl mx-auto">
-            <div class="mono text-cyan-500 mb-12">[[01] CORE_ARCHITECTURE_OVERSIGHT]</div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <div class="hud-border md:col-span-2 p-10 bg-black/40 space-y-6">
-                    <h3 class="heading text-2xl text-white tracking-widest">// THE_BLUEPRINT_LOGIC</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Standard medical models treat symptoms. Monument Labs treats the <span class="text-white">Architecture</span>. By utilizing Norvoc-Core gap analysis, we identify sub-clinical metabolic loops that traditional diagnostics ignore. We don't wait for the system to crash; we identify the instability in the source code.
-                    </p>
-                    <div class="grid grid-cols-2 gap-6 pt-4">
-                        <div class="border-l border-cyan-900 pl-4">
-                            <h4 class="mono text-xs text-cyan-400">GAP_DETECTION</h4>
-                            <p class="text-[10px] text-gray-500 uppercase">Predictive analysis of 5,000+ biomarkers.</p>
-                        </div>
-                        <div class="border-l border-cyan-900 pl-4">
-                            <h4 class="mono text-xs text-cyan-400">MOLECULAR_PATCH</h4>
-                            <p class="text-[10px] text-gray-500 uppercase">Precision synthesis of katin-grade peptides.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hud-border p-10 bg-black/60 flex flex-col justify-center items-center text-center relative overflow-hidden">
-                    <div class="absolute inset-0 bg-cyan-500/5 animate-pulse-slow"></div>
-                    <div class="text-5xl font-bold text-cyan-400 heading mb-2">99.8%</div>
-                    <div class="mono text-[10px] text-gray-500 uppercase tracking-widest">Synthesis_Purity_Verified</div>
-                    <p class="text-[9px] text-cyan-900 mono mt-4">HPLC // MASS_SPEC // GMP</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="02" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="mono text-cyan-500 mb-12">[[02] GLOBAL_COMPUTE_NODES]</div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="hud-border p-8 bg-zinc-900/20 space-y-4">
-                    <div class="flex justify-between">
-                        <span class="mono text-[10px] text-cyan-400">NODE_01 // IRVINE_CA</span>
-                        <i data-lucide="brain" class="w-4 h-4 text-cyan-800"></i>
-                    </div>
-                    <h4 class="heading text-md">Bio_Intelligence</h4>
-                    <p class="text-[11px] text-gray-500 mono leading-relaxed uppercase">
-                        33.6846° N, 117.8265° W<br>
-                        Focus: Predictive Gap Analysis & AI Core Modeling.
-                    </p>
-                </div>
-                <div class="hud-border p-8 bg-zinc-900/20 space-y-4">
-                    <div class="flex justify-between">
-                        <span class="mono text-[10px] text-cyan-400">NODE_02 // SINGAPORE</span>
-                        <i data-lucide="factory" class="w-4 h-4 text-cyan-800"></i>
-                    </div>
-                    <h4 class="heading text-md">Quantum_MFG</h4>
-                    <p class="text-[11px] text-gray-500 mono leading-relaxed uppercase">
-                        1.3521° N, 103.8198° E<br>
-                        Focus: Precision Molecular Synthesis & Global Logistics.
-                    </p>
-                </div>
-                <div class="hud-border p-8 bg-zinc-900/20 space-y-4">
-                    <div class="flex justify-between">
-                        <span class="mono text-[10px] text-cyan-400">NODE_03 // HELSINKI</span>
-                        <i data-lucide="snowflake" class="w-4 h-4 text-cyan-800"></i>
-                    </div>
-                    <h4 class="heading text-md">Cryo_Resilience</h4>
-                    <p class="text-[11px] text-gray-500 mono leading-relaxed uppercase">
-                        60.1695° N, 24.9410° E<br>
-                        Focus: Epigenetic Longevity & Environmental Stress Testing.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 bg-black border-t border-cyan-900/30 px-6 overflow-hidden relative">
-        <div class="absolute bottom-0 right-0 opacity-[0.02] heading text-[200px] pointer-events-none select-none uppercase leading-none">
-            Monument
-        </div>
-        
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
-            <div class="space-y-6">
-                <div class="heading text-xl text-white">MONUMENT_LABS</div>
-                <p class="text-[10px] mono text-gray-600 leading-relaxed uppercase">
-                    The Institutional OS for Human Architecture. Optimizing the bridge between genomic potential and phenotypic reality.
-                </p>
-            </div>
-            
-            <div class="space-y-6">
-                <h5 class="mono text-xs text-cyan-500 tracking-widest font-bold">// SYSTEM_INDEX</h5>
-                <ul class="text-[10px] mono space-y-3 text-gray-500 uppercase font-medium">
-                    <li><a href="#" class="hover:text-cyan-400 transition">ATP_Mitochondrial_Logic</a></li>
-                    <li><a href="#" class="hover:text-cyan-400 transition">Peptide_Synthesis_Archive</a></li>
-                    <li><a href="#" class="hover:text-cyan-400 transition">Institutional_Compliance</a></li>
-                </ul>
-            </div>
-
-            <div class="space-y-6">
-                <h5 class="mono text-xs text-cyan-500 tracking-widest font-bold">// COMPLIANCE_v2.6</h5>
-                <p class="text-[9px] text-gray-600 mono leading-relaxed uppercase">
-                    Purity verified via HPLC & Mass Spectrometry at 99.8%+. Protocols optimized for institutional research and performance longevity.
-                </p>
-            </div>
-
-            <div class="space-y-6">
-                <h5 class="mono text-xs text-cyan-500 tracking-widest font-bold">// STATUS</h5>
-                <div class="p-4 bg-cyan-500/5 border border-cyan-500/10">
-                    <p class="text-[8px] text-cyan-500 mono mb-1 uppercase tracking-tighter">Connection Encryption</p>
-                    <p class="text-[10px] text-white mono font-bold">AES-256_GCM_ACTIVE</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto border-t border-zinc-900 mt-16 pt-8 flex flex-wrap gap-x-8 gap-y-2 opacity-20 hover:opacity-100 transition-opacity">
-            <span class="text-[8px] mono uppercase">Longevity Science</span>
-            <span class="text-[8px] mono uppercase">Biohacking Architecture</span>
-            <span class="text-[8px] mono uppercase">Peptide Synthesis GMP</span>
-            <span class="text-[8px] mono uppercase">ATP Mitochondrial Upregulation</span>
-            <span class="text-[8px] mono uppercase">Epigenetic Stability Protocols</span>
-        </div>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-        console.log("MONUMENT_LABS_OS: System Boot Complete. Integrity Verified.");
-    </script>
-</body>
-</html>
+    <nav class="fixed top-0 w-full z-50 bg-black/90 border-b border-cyan-900/30 backdrop-blur-xl px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-xs mono">
+            <div class="heading text-xl font-bold flex items-center gap-3 tracking-widest text-white">
+                <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse shadow-[0_0_10px_#0
